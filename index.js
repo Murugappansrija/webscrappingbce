@@ -10,6 +10,7 @@ const nodeserver = express()
 
 dotenv.config()
 nodeserver.use(express.json())  
+nodeserver.use(cors())
 
  mongoose.connect(process.env.db)
 
