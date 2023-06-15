@@ -22,7 +22,7 @@ nodeserver.use(express.json())
 
 const port = 4000
 
-nodeserver.listen(port,'localhost',()=>{
+nodeserver.listen(port,()=>{
     console.log('server running succssesfully')
  })
   
@@ -45,7 +45,7 @@ nodeserver.listen(port,'localhost',()=>{
   
         products.push({ source: 'Flipkart', image, description, rating, price, finalPrice });
       });
-      // console.log(products)
+       console.log(products)
       await Product.insertMany(products);
       console.log('Flipkart data scraped and saved to the database.');
     } catch (error) {
@@ -70,7 +70,7 @@ nodeserver.listen(port,'localhost',()=>{
   
         products.push({ source: 'Snapdeal', image, description, rating, price });
       });
-      // console.log(products)
+      console.log(products)
   
       await Product.insertMany(products);
       console.log('Snapdeal data scraped and saved to the database.');
@@ -98,10 +98,10 @@ nodeserver.listen(port,'localhost',()=>{
   
         products.push({ source: 'Amazon', image, description, rating, price, finalPrice});
       });
-      // console.log(products)
+       console.log(products)
       
       await Product.insertMany(products);
-      console.log('Amazon data scraped and saved to the database.');
+      console.log('Amazon datas scraped and saved to the database.');
     } catch (error) {
       console.log('Error scraping Amazon:', error);
     }
