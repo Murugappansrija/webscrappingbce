@@ -11,7 +11,7 @@ const nodeserver = express()
 dotenv.config()
 nodeserver.use(express.json())  
 
- mongoose.connect('mongodb+srv://murugappansj:murugappansj123@cluster0.w6s1o7v.mongodb.net/webscraper')
+ mongoose.connect(process.env.db)
 
   .then(() => {
     console.log('db connected successfully');
