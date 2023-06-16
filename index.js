@@ -18,7 +18,7 @@ nodeserver.use(cors())
     console.log('db connected successfully');
   })
   .catch(error => {
-    console.log('error while we connecting:', error);
+    console.log('error while we connectings:', error);
   });
 
 const port = 4000
