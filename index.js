@@ -139,7 +139,7 @@ nodeserver.get('/products', async (req, res) => {
       const products =await Product.find().lean();
       const {q} = req.query;
       console.log(q)
-      res.json(products.splice(0,10));
+      res.json(products);
     } catch (error) {
       console.error('Error fetching products:', error);
       res.status(500).json({ error: 'Internal server error' });
